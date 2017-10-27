@@ -1,0 +1,84 @@
+/*
+* @Author: Thinkpad
+* @Date:   2017-10-27 12:59:45
+* @Last Modified by:   Thinkpad
+* @Last Modified time: 2017-10-27 13:34:10
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: url('img/bg.jpg') no-repeat center / cover;
+}
+li{
+	position: absolute;
+	list-style: none;
+}
+li img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.lishi{
+	width: 170px;
+	height: 209px;
+	left: 200px;
+	top:200px;
+}
+.wuzi{
+	width: 200px;
+	height: 200px;
+	left: 200px;
+	top: 450px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.dazi{
+	width: 200px;
+	height: 200px;
+	left: 470px;
+	top: 450px; 
+	border-radius: 50%;
+	overflow: hidden;
+}
+.tanchishe{
+	width: 200px;
+	height: 200px;
+	left: 720px;
+	top: 450px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.puke{
+	width: 200px;
+	height: 200px;
+	left: 970px;
+	top: 450px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.zhubao{
+	width: 300px;
+	height: 200px;
+	left: 50%;
+	top: 50px;
+	margin-left: -150px;
+}
+.huaban{
+	width: 170px;
+	height: 209px;
+	right: 200px;
+	top: 200px; 
+}
