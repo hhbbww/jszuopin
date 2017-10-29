@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪吃蛇</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+	<style>
+		.snake{
+			width: 600px;
+			height: 600px;
+			background: url('t015f513a7e789a0ce6.jpg') no-repeat center / cover;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -300px;
+			margin-top: -300px;
+			border-left: 1px solid transparent;
+			border-top:1px solid transparent; 
+		}
+		.xian{
+			width: 29px;
+			height: 29px;
+			background: transparent;
+			margin-right: 1px;
+			margin-bottom: 1px;
+			float: left;
+			
+		}
+		.hot{
+			background: green!important;
+		}
+		.return{
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        text-align: center;
+	    }
+	    .return a{
+	        font-size: 36px;
+	        color: #000;
+	        text-decoration: none;
+	        display: block;
+	    }
+	</style>
+<body>
+	<div class="snake"></div>
+	 <div class="return"><a href="../../作品/index.html">返回</a></div>
+</body>
+<script src="index.js"></script>
+<script>
+	let game = new Snake();
+	game.star();
+	
+</script>
+</html>
