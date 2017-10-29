@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/canvas.css">
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+</head>
+<style>
+	.return{
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        text-align: center;
+        z-index: 999;
+    }
+    .return a{
+        font-size: 36px;
+        color: #000;
+        text-decoration: none;
+        display: block;
+    }
+</style>
+<body>
+	<main>
+		<div class="left">
+			<ul>
+				<li class="hot tool" id="line">
+					<i class="iconfont icon-xiexian"></i>
+				</li>
+				<li class="hot1 tool" id='xuxian'>
+					<i class="iconfont icon-xuxian"></i>
+				</li>
+				<li class="hot tool" id="juxing">
+					<i class="iconfont icon-juxing"></i>
+				</li>
+				<li class="hot1 tool" id="duobian">
+					<i class="iconfont icon-duobianxing"></i>
+				</li>
+				<li class="hot tool" id="duojiao">
+					<i class="iconfont icon-wujiaoxing"></i>
+				</li>
+				<li class="hot1 tool" id="yuan">
+					<i class="iconfont icon-yuan"></i>
+				</li>
+				
+				<li class="hot tool" id="qian">
+					<i class="iconfont icon-pencil"></i>
+				</li>
+				<hr>
+				<li class="hot1 tool" id="miaobian">
+					<i class="iconfont icon-miaobian"></i>
+				</li>
+				<li style="border:0;">
+				</li>
+				<li class="hot1 tool" id="tian">
+					<i class="iconfont icon-tianchong"></i>
+				</li>
+				<li class="hot tool" id="colorfill">
+					<input type="color">
+					
+				</li>
+				<li style="border:0;">
+				</li>
+				<li class="hot tool" id="colorstroke">
+					<input type="color">
+				</li>
+				
+				<hr>
+				<li class="hot1 tool" id="chexiao">
+					<i class="iconfont icon-chexiao"></i>
+				</li>
+				<li class="hot tool" id="eraser">
+					<i class="iconfont icon-eraser"></i>
+				</li>
+				<li class="hot1 tool" id='clip'>
+					<i class="iconfont icon-caijian"></i>
+				</li>
+				<li class="hot1 tool" id="zi">
+					字
+				</li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="right-top">
+				<a href="">保存</a>
+				<button>新建</button>
+				<button>返回</button>
+			</div>
+			<div class="right-foot">
+				<canvas width="500" height="500 "></canvas>
+				<div id="xp"></div>
+				<div class="zhe">
+				</div>
+				
+				<div class="caijian"></div>
+			</div>
+
+		</div>
+	</main>
+	<div class="return"><a href="../../作品/index.html">返回</a></div>
+</body>
+<script src="js/index.js"></script>
+<script src="js/canvas.js"></script>
+</html>
