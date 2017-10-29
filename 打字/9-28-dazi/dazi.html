@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<style>
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        /* height: 666px; */
+        overflow: hidden;
+        background: url('img/beijing.jpg') no-repeat center / cover;
+    }
+    .box{
+        width:60px;
+        height:70px;
+        background: #0085b0;
+        border-radius: 5px;
+        font-size: 20px;
+        text-align: center;
+        line-height:50px;
+        position: absolute;
+        left:0;
+        top:0;
+    }
+    .tou{
+        width: 800px;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    button{
+        width: 100px;
+        height: 100%;
+        background: #0085b0;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 22px;
+        color: #dfdfdf;
+    }
+    .gk,.fen{
+        width: 100px;
+        height: 100%;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background: #cccccc;
+        font-size: 22px;
+        text-align: center;
+        line-height: 50px;
+    }
+    .kaishi{
+        height: 50px;
+        position: absolute;
+        left: 832px;
+        top: 10px;
+        z-index: -1;
+        opacity: 0;
+    }
+    .xue{
+        width: 150px;
+        height: 80px;
+        background: red;
+        font-size: 22px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        text-align: center;
+        line-height: 80px;
+        border-radius: 10px;
+    }
+    .jishu{
+        width: 200px;
+        height: 200px;
+        /* background: red; */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+        color: red;
+        opacity: 0;
+    }
+    .return{
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        text-align: center;
+    }
+    .return a{
+        font-size: 36px;
+        color: #000;
+        text-decoration: none;
+        display: block;
+    }
+
+</style>
+    <div class="tou">
+        <div class="gk">
+            第<span class="guanshu">1</span>关
+        </div>
+        <button class="start">开始</button>
+        <button class="gameover">结束</button>
+        <button class="repeat">重玩</button>
+        <button class="zanting">暂停</button>
+        <button class="kaishi">继续</button>
+        <div class="fen">
+            <span class="fenshu">0</span>分
+        </div>
+        <div class="xue">
+            生 命:&nbsp;<span class="zhi">    0</span>
+        </div>
+    </div>
+    <div class="jishu">
+        <span class="shu">4</span>
+    </div>
+    <div class="return"><a href="../../作品/index.html">返回</a></div>
+<body>
+<script src="dazi.js"></script>
+<script>
+    window.onload= function(){
+        let game =new Game();
+        let start = document.querySelector('.start')
+        let over = document.querySelector('.gameover')
+        let repeat1 = document.querySelector('.repeat')
+        let stop = document.querySelector('.zanting')
+        let kaishi = document.querySelector('.kaishi')
+        let shu = document.querySelector('.shu')
+        let jishu =document.querySelector('.jishu') 
+        start.onclick = function(){
+           let t= setInterval(function(){
+                jishu.style.opacity=1;
+                shu.innerHTML -=1;
+                if (shu.innerHTML==-1) {
+                    jishu.style.opacity=0;
+                    clearInterval(t)
+                    game.star();
+                }
+            },1000);
+            shu.innerHTML=4;
+            
+
+        }
+        over.onclick=function(){
+            game.end();
+        }
+        repeat1.onclick=function(){
+            game.resize();
+        }
+        stop.onclick = function(){
+            kaishi.style.opacity=1;
+            kaishi.style.zIndex=0;
+            game.stop(); 
+        }
+        kaishi.onclick=function(){
+            kaishi.style.opacity=0;
+            kaishi.style.zIndex=-1;  
+            game.resize();
+            
+        }
+    }
+
+</script>
+</body>
+
+</html>
